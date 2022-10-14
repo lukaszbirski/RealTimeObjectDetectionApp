@@ -5,7 +5,8 @@ import android.content.Context
 import pub.devrel.easypermissions.EasyPermissions
 
 object PermissionUtil {
-    fun hasMessagesPermission(context: Context) = EasyPermissions.hasPermissions(
+
+    fun hasPermissions(context: Context) = EasyPermissions.hasPermissions(
         context,
         Manifest.permission.CAMERA
     )
