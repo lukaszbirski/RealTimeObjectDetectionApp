@@ -30,6 +30,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
     buildFeatures {
         viewBinding true
         mlModelBinding true
@@ -59,6 +63,7 @@ dependencies {
 
     // Tensorflow
     implementation 'org.tensorflow:tensorflow-lite-task-vision:0.3.1'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.2.0'
 
     // opencv
     implementation 'com.quickbirdstudios:opencv:4.5.3.0'
